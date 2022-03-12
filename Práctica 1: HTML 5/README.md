@@ -2,7 +2,7 @@
 
 ## Ejercicios
 
-### ¿Cómo quedaría la representación en forma de árbol de este código HTML?
+### 1. ¿Cómo quedaría la representación en forma de árbol de este código HTML?
 
 ``` HTML
 <!DOCTYPE HTML>
@@ -28,3 +28,8 @@ La representación en forma de arbol sería la siguiente:
                   --> <p> --> <a>
 ```
 
+### 2. Crea un fichero que se llame holamundo.html con el contenido del Ejemplo 1, súbelo al servidor y visualízalo en el navegador.
+
+Nos conectaremos al servidor que nos proporciona la asignatura con nuestras credenciales de correo sin el dominio y subiremos a la carpeta **public_html** el fichero HTML.
+
+[holamundo.html](holamundo.html)
