@@ -44,3 +44,11 @@ En la imagen de la etiqueta HTML podemos definir el tamaño de las siguientes fo
 Todas estas formas pueden ser combinadas entre la altura y la anchura.
 
 [holamundo.html](holamundo.html)
+
+### 4. Introduce los siguientes enlaces:
+- De texto, a la página principal de la Universidad de Granada.
+- Mediante una imagen, al buscador Google.
+- Crea varios párrafos en tu documento con diferentes identificadores y enlaza uno de ellos. 
+- Crea un segundo documento HTML, prueba.html, y enlaza a dicho fichero.
+
+[holamundo.html](holamundo.html)
