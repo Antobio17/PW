@@ -33,3 +33,14 @@ La representación en forma de arbol sería la siguiente:
 Nos conectaremos al servidor que nos proporciona la asignatura con nuestras credenciales de correo sin el dominio y subiremos a la carpeta **public_html** el fichero HTML.
 
 [holamundo.html](holamundo.html)
+
+### 3. Busca y bájate algunas imágenes e introduce en el fichero holamundo.html varios elementos img. ¿Cómo especificarías el tamaño de la imagen?
+
+En la imagen de la etiqueta HTML podemos definir el tamaño de las siguientes formas usando las propiedades **width** y **height**:
+- Indicando los píxeles exactor que deseamos. (width=1000px height=400px)
+- Dejándolo de manera automática. (width=auto height=auto)
+- Usando porcentajes. (width=60% height=50%)
+
+Todas estas formas pueden ser combinadas entre la altura y la anchura.
+
+[holamundo.html](holamundo.html)
