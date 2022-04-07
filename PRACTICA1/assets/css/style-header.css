@@ -77,3 +77,45 @@ header .header-users .register {
 header .nav-bar .section-navigation {
     border-left: 1px solid white;
 }
+
+@media (max-width: 745px) {
+    header {
+        display: block;
+        padding: 1rem 0 0;
+    }
+
+    header .header-brand {
+        justify-content: center;
+    }
+
+    header .header-users {
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    header .header-users .login-form input,
+    header .header-users .login-form button {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 460px) {
+    header .header-users .login-form {
+        display: grid;
+    }
+
+    header .header-users .login-form input,
+    header .header-users .login-form button {
+        margin: 5px 4rem;
+    }
+}
+
+@media (max-width: 365px) {
+    header .nav-bar {
+        display: grid;
+    }
+
+    header .nav-bar a {
+        margin: 5px 0;
+    }
+}
