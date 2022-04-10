@@ -1,25 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <title>Centro de Exposiciones</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../../assets/css/style-main.css">
+    <link rel="stylesheet" href="../../../assets/css/style-header.css">
+    <link rel="stylesheet" href="../../../assets/css/style-footer.css">
     <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
 </head>
 
 <body>
 <header>
-    <div class="nav-brand">
+    <section class="header-brand">
         <!--suppress CheckImageSize -->
         <img src="../../../images/el_posito_logo.png" alt="El Pósito" width="90" height="90">
         <h1>El Pósito</h1>
-    </div>
-    <div class="row nav-bar">
-        <a class="nav-bar-home" href="../../../index.html">Inicio</a>
-        <a class="nav-bar-expo" href="../acuarela.html">Acuarela</a>
-    </div>
-    <div class="nav-bar">
+    </section>
+    <section class="header-users">
         <form class="login-form" action="#" method="post">
             <!--suppress HtmlFormInputWithoutLabel -->
             <input type="text" placeholder="Usuario..." name="username" required>
@@ -27,29 +25,32 @@
             <input type="password" placeholder="Contraseña..." name="password" required>
             <button type="submit">Iniciar sesión</button>
         </form>
-        <a class="register" href="#">Registrarse</a>
-        <a class="register" href="#">Registrar comisario</a>
-    </div>
+        <a class="register" href="../../../altapublico.html">Registrarse</a>
+        <a class="register" href="../../../altacomisario.html">Registrar comisario</a>
+    </section>
+    <nav class="nav-bar">
+        <section class="section-expo-types">
+            <a class="white-link" href="../../../categorias/fotografia.html">Fotografía</a>
+            <a class="white-link" href="../../../categorias/pintura.html">Pintura</a>
+            <a class="white-link" href="../../../categorias/escultura.html">Escultura</a>
+        </section>
+        <section class="section-navigation">
+            <a class="white-link" href="../../../index.html">Home</a>
+            <a class="white-link" href="../../../exposiciones/acuarela/acuarela.html">Acuarela</a>
+        </section>
+    </nav>
 </header>
 
-<nav>
-    <a class="white-link" href="../../../categorias/fotografia.html">Fotografía</a>
-    <a class="white-link" href="../../../categorias/pintura.html">Pintura</a>
-    <a class="white-link" href="../../../categorias/escultura.html">Escultura</a>
-</nav>
-
-<main>
+<main class="page-obra">
     <section class="section-info-obra">
-        <div class="section-info-obra-header">
-            <img
-                    class="img"
-                    src="../../../images/exposiciones/acuarela/obras/niebla-philip-jamison.jpg"
-                    width="550" height="387" alt="Niebla sobre la isla de Lanes"
-            >
-            <h1>Niebla sobre la isla de Lanes</h1>
-            <h3>Por Mario Gámiz Vargas</h3>
-        </div>
-        <p>
+        <img
+                class="img"
+                src="../../../images/exposiciones/acuarela/obras/niebla-philip-jamison.jpg"
+                width="550" height="387" alt="Niebla sobre la isla de Lanes"
+        >
+        <h1>Niebla sobre la isla de Lanes</h1>
+        <h3>Por Mario Gámiz Vargas</h3>
+        <p class="obra-description">
             Philip Jamison nació en 1925 en Philadelphia, Pennsylvania. Es un artista que trabaja principalmente
             con la acuarela. La inspiración de Jamison proviene principalmente de los alrededores de su casa
             en West Chester, Pensilvania; y su casa de verano en Vinalhaven, Maine; escenas típicas son paisajes,
@@ -59,22 +60,23 @@
         </p>
     </section>
 </main>
+
 <footer>
-    <div>
+    <section>
         <h4>Contacta</h4>
         <p>684144382</p>
         <h4>Ubicación</h4>
         <p>C/ Cuesta de las Monjas N13</p>
-    </div>
-    <div>
+    </section>
+    <section>
         <p><a href="../../../contacto.html">Desarrollador: Antonio Jiménez</a></p>
         <p><a href="../../../doc/documentacion.pdf">Como se hizo...</a></p>
-    </div>
-    <div>
+    </section>
+    <section>
         <h3>GRACIAS</h3>
         <h3>POR SU</h3>
         <h3>VISITA</h3>
-    </div>
+    </section>
 </footer>
 </body>
 </html>
