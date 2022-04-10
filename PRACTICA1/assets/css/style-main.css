@@ -283,6 +283,11 @@ body {
         width: 100%;
     }
 
+    .page-expo .obras fieldset {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
     .page-category-expo .container-expos {
         grid-template-columns: 33% 33% 33%;
     }
@@ -346,11 +351,6 @@ body {
         margin: 0;
     }
 
-    .page-expo .obras fieldset {
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-
     .page-signup .signup-form-section form {
         grid-template-columns: 100%;
     }
@@ -369,6 +369,11 @@ body {
 @media (max-width: 790px) {
     .page-obra {
         width: 90%;
+    }
+
+    .page-expo .obras fieldset {
+        display: grid;
+        grid-template-columns: 100%;
     }
 }
 
@@ -395,6 +400,7 @@ body {
 }
 
 @media (max-width: 460px) {
+    .page-expo .obras fieldset article a img,
     .page-expo .expo-img img {
         width: 90%;
         height: 90%;
