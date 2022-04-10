@@ -29,18 +29,6 @@ a:hover {
     font-weight: bold;
 }
 
-/* DISEÑO */
-
-.row {
-    display: flex;
-    align-items: center;
-    padding: 1.0rem;
-}
-
-.col {
-    display: block;
-}
-
 /**/
 
 body {
@@ -196,6 +184,79 @@ body {
     text-align: center;
 }
 
+/* ALTAS */
+
+.page-signup {
+    width: 70%;
+    margin: 4rem auto;
+}
+
+.page-signup .signup-form-section form {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    border: 2px solid #222222;
+    border-radius: 20px;
+    padding: 2rem;
+    background-color: #cbcbcb;
+}
+
+.page-signup .signup-form-section form label {
+    margin: 1rem 0 0;
+}
+
+.page-signup .signup-form-section form .birthDate {
+    grid-column: span 2;
+    width: 50%;
+}
+
+.page-signup .signup-form-section form input {
+    width: 90%;
+    font-family: 'Muli', sans-serif;
+    color: #222222;
+    border-radius: 20px;
+    border: 2px solid #222222;
+    padding: 0.6rem;
+    background-color: white;
+    margin: 1rem 0;
+}
+
+.page-signup .signup-form-section form button {
+    width: 300px;
+    grid-row: 6;
+    grid-column: span 2;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid #222222;
+    padding: 0.6rem;
+    transition: 0.5s;
+    margin: 1rem 0;
+    color: #222222;
+}
+
+.page-signup .signup-form-section form button:hover {
+    background-color: #222222;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid #222222;
+    padding: 0.6rem;
+    transition: 0.5s;
+}
+
+.signup-success {
+    background-color: #d4edda;
+    border-radius: 20px;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    padding: 0.3rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 15px;
+}
+
+/* MEDIA QUERIES */
+
 @media (max-width: 1400px) {
     .page-home {
         width: 100%;
@@ -246,13 +307,27 @@ body {
         text-align: center;
     }
 
-    .page-expo .expo-info{
+    .page-expo .expo-info {
         margin: 0;
     }
 
     .page-expo .obras fieldset {
         display: grid;
         grid-template-columns: 50% 50%;
+    }
+
+    .page-signup .signup-form-section form {
+        grid-template-columns: 100%;
+    }
+
+    .page-signup .signup-form-section form .birthDate {
+        width: 90%;
+        grid-column: span 1;
+    }
+
+    .page-signup .signup-form-section form button {
+        grid-column: span 1;
+        grid-row: 10;
     }
 }
 
@@ -277,6 +352,10 @@ body {
     .page-obra .section-info-obra img {
         width: 90%;
         height: 90%;
+    }
+
+    .page-signup .signup-form-section form button {
+        width: 90%;
     }
 }
 
