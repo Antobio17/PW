@@ -459,6 +459,10 @@ body {
     .page-signup .signup-form-section form button {
         width: 90%;
     }
+
+    .page-doc {
+        width: 95%;
+    }
 }
 
 @media (max-width: 460px) {
