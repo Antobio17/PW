@@ -307,6 +307,27 @@ body {
     margin: 0 0.5rem;
 }
 
+/* DOCUMENTACIÓN */
+
+.page-doc {
+    width: 80%;
+    margin: 4rem auto;
+}
+
+.page-doc .documentation {
+    text-align: center;
+}
+
+.page-doc .documentation .doc-access {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.page-doc .documentation .doc-access a {
+    color: black;
+    text-decoration: underline;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 1550px) {
