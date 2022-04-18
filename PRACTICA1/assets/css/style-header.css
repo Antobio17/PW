@@ -134,4 +134,11 @@ header .nav-bar .section-navigation {
     header .nav-bar a {
         margin: 5px 0;
     }
+
+    header .header-users .login-form,
+    header .header-users .login-form input,
+    header .header-users .login-form button {
+        margin: 0.2rem auto;
+        width: 80%;
+    }
 }
