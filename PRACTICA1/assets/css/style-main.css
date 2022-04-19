@@ -467,6 +467,10 @@ main {
     .page-doc {
         width: 95%;
     }
+
+    .page-doc .documentation iframe {
+        width: 95%;
+    }
 }
 
 @media (max-width: 460px) {
