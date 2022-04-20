@@ -194,16 +194,30 @@ main {
     grid-column: span 3;
 }
 
-.page-expo .comments .comment {
+.page-expo .comments p {
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.page-expo .comments .comment-container {
     border: 2px solid #222222;
     border-radius: 20px;
     padding: 2rem;
     margin: 1rem 0;
 }
 
-.page-expo .comments .comment legend{
+.page-expo .comments .comment-container legend{
     padding: 0 1rem;
     font-weight: bold;
+}
+
+.page-expo .comments .comment-container .comment{
+    text-align: justify;
+}
+
+.page-expo .comments .comment-container .comment-date{
+    text-align: right;
+    margin-top: 1rem;
 }
 
 .page-expo .comments .commentsForm {
