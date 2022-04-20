@@ -188,6 +188,62 @@ main {
     padding: 1rem 0;
 }
 
+.page-expo .comments {
+    margin: 2rem auto 0;
+    width: 50%;
+    grid-column: span 3;
+}
+
+.page-expo .comments .comment {
+    border: 2px solid #222222;
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 1rem 0;
+}
+
+.page-expo .comments .comment legend{
+    padding: 0 1rem;
+    font-weight: bold;
+}
+
+.page-expo .comments .commentsForm {
+    display: grid;
+    justify-items: right;
+    width: 100%;
+}
+
+.page-expo .comments .commentsForm textarea{
+    width: calc(100% - 2rem);
+    font-family: 'Muli', sans-serif;
+    border-radius: 20px;
+    border: 2px solid #222222;
+    padding: 1rem;
+}
+
+.page-expo .comments .commentsForm button{
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid #222222;
+    padding: 0.4rem;
+    transition: 0.5s;
+    margin: 1rem 0;
+    color: #222222;
+    border-left-style: dotted;
+    border-right-style: dotted;
+    background-color: white;
+
+}
+
+.page-expo .comments .commentsForm button:hover {
+    background-color: #222222;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid #222222;
+    padding: 0.4rem;
+    transition: 0.5s;
+}
+
 /* PAGINA OBRA */
 
 .page-obra {
@@ -391,6 +447,10 @@ main {
     .menu-last-news ul li {
         margin: 2rem 0;
     }
+
+    .page-expo .comments {
+        width: 80%;
+    }
 }
 
 @media (max-width: 1050px) {
@@ -498,5 +558,9 @@ main {
 
     .page-expo .obras fieldset {
         padding: 0 5px;
+    }
+
+    .page-expo .comments {
+        width: 100%;
     }
 }
