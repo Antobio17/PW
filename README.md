@@ -24,4 +24,14 @@ docker-compose exec app bin/console cache:clear
 # Doctrine
 docker-compose exec app bin/console doctrine:migrations:diff
 docker-compose exec app bin/console doctrine:migrations:execute --up DoctrineMigrations\VersionXXXXXXXXX
+# Borrar vendor/doctrine
+docker-compose exec app /usr/bin/composer require doctrine
+
+# Instalar encore
+docker-compose exec app /usr/bin/composer require symfony/webpack-encore-bundle
+
+# Instalaciones yarn
+docker-compose exec app yarn add @symfony/webpack-encore --dev
+docker-compose exec app yarn add sass-loader@^12.0.0 sass
+docker-compose exec app yarn add --dev @fortawesome/fontawesome-free
 ```
