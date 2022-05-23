@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="bahia.ugr.es" id="2cd3fcd3-2eb2-456a-b568-9462e5b80c34" port="22" customName="PW" nameFormat="CUSTOM" username="pw20885646">
+        <option name="customName" value="PW" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

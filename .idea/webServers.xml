@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e52ba626-1d70-4b39-8168-c0ada39a7ded" name="PW">
+        <fileTransfer rootFolder="/home/pw20885646/public_html/pe2" accessType="SFTP" host="bahia.ugr.es" port="22" sshConfigId="2cd3fcd3-2eb2-456a-b568-9462e5b80c34" sshConfig="PW">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
