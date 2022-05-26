@@ -34,4 +34,13 @@ docker-compose exec app /usr/bin/composer require symfony/webpack-encore-bundle
 docker-compose exec app yarn add @symfony/webpack-encore --dev
 docker-compose exec app yarn add sass-loader@^12.0.0 sass
 docker-compose exec app yarn add --dev @fortawesome/fontawesome-free
+
+# Acceder al contenedor 
+docker exec -it php-container bash
+
+docker exec -it mysql-container bash
+mysql -uroot -psecret
+
+docker-compose run --rm node-service yarn encore dev
+
 ```
