@@ -341,6 +341,16 @@ main {
     box-shadow: rgba(0, 0, 0, 0.1) 0 5px 15px;
 }
 
+.signup-failed {
+    border-radius: 20px;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 0.3rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 5px 15px;
+}
+
 /* CATEGORIES */
 
 .page-category-expo {
