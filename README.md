@@ -44,4 +44,6 @@ mysql -uroot -psecret
 docker-compose run --rm node-service yarn encore dev
 docker-compose exec php-service composer require twig/extra-bundle
 
+podman-compose exec nginx-service /bin/sh
+  
 ```
