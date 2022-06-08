@@ -22,8 +22,8 @@ docker-compose up
 docker-compose exec app bin/console cache:clear
 
 # Doctrine
-docker-compose exec app bin/console doctrine:migrations:diff
-docker-compose exec app bin/console doctrine:migrations:execute --up DoctrineMigrations\VersionXXXXXXXXX
+docker-compose exec php-service bin/console doctrine:migrations:diff
+docker-compose exec php-service bin/console doctrine:migrations:execute --up DoctrineMigrations\VersionXXXXXXXXX
 # Borrar vendor/doctrine
 docker-compose exec app /usr/bin/composer require doctrine
 
