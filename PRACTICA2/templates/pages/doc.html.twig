@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% set mainCSSClass = 'page-doc' %}
+
+{% block main %}
+    <section class="documentation">
+        <h1>Documentación</h1>
+        <iframe src="como_se_hizo.pdf" width="70%" height="600px"></iframe>
+        <p class="doc-access">Accede desde <a href="doc/como_se_hizo.pdf" target="_blank">aquí</a>.</p>
+    </section>
+{% endblock %}

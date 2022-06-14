@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actualizar Usuario{% endblock %}
+
+{% set mainCSSClass = 'page-form' %}
+
+{% block main %}
+    <h1>Perfil de usuario</h1>
+
+    {% set registerComisario = false %}
+    {% if user is not null and
+        (constant('App\\Entity\\User::ROLE_ADMIN') in user.roles
+        or constant('App\\Entity\\User::ROLE_COMISARIO') in user.roles) %}
+        {% set registerComisario = true %}
+    {% endif %}
+
+    <section class="form-container form-container-2">
+        {{ form_start(registrationForm, {'attr': {'id': 'update-user-form'}}) }}
+        <section class="form-section form-section-user">
+            <h4><i class="fa-solid fa-user"></i> Información usuario</h4>
+            {{ form_row(registrationForm.email, {
+                label: 'Nombre de usuario:',
+                required: false
+            }) }}
+            <input type="hidden" id="user-id" value="{{ user.id }}"/>
+            <p id="validate-email-user" class="help-text font-bold"></p>
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Contraseña:',
+                help: '* Si no se completa se mantendrá la contraseña actual.',
+                constraints: {},
+                required: false
+            }) }}
+        </section>
+        <section class="form-section form-section-personal">
+            <h4><i class="fas fa-solid fa-image"></i> Información personal</h4>
+            {{ form_row(registrationForm.name, {
+                required: false
+            }) }}
+            <p id="validate-name-user" class="help-text font-bold"></p>
+            {{ form_row(registrationForm.surname, {
+                required: false
+            }) }}
+            <p id="validate-surname-user" class="help-text font-bold"></p>
+            {{ form_row(registrationForm.birthdate, {
+                required: false
+            }) }}
+            {{ form_row(registrationForm.isComisario, {
+                data: 'form_row'
+            }) }}
+
+            <button type="submit" class="btn">
+                Actualizar
+            </button>
+        </section>
+        {{ form_end(registrationForm) }}
+    </section>
+{% endblock %}

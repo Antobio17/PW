@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% set mainCSSClass = 'page-contact' %}
+
+{% block main %}
+    <section class="profile">
+        <section class="presentation">
+            <!--suppress CheckImageSize -->
+            <img class="png-shadow"
+                 width="260" height="260"
+                 src="build/images/profile.png"
+                 alt="Antonio Jiménez Rodríguez">
+            <h1>Antonio Jiménez Rodríguez</h1>
+            <h3>Junior Software Developer en iEditorial Elearning</h3>
+        </section>
+        <section class="more-info">
+            <p>
+                Esta Web ha sido maquetada y construida por mí, Antonio Jiménez Rodríguez, siguiendo los diseños y
+                directrices dadas en el guión de la primera práctica evaluable de la asignatura <b>Programación Web</b>
+                en el curso 21-22.
+            </p>
+            <p>
+                Puedes contactar conmigo en alguno de los siguientes enlaces:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/antonio-jim%C3%A9nez-rodr%C3%ADguez-098aa8205/"
+                       target="_blank">
+                        <img class="png-shadow" alt="LinkedIN" width="30px" src="build/images/linkedin.svg"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Antobio17/" target="_blank">
+                        <img class="png-shadow" alt="LinkedIN" width="30px" src="build/images/github.svg"/>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </section>
+{% endblock %}

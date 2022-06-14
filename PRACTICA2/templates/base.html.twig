@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Centro de exposiciones{% endblock %}</title>
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+    <!--suppress HtmlUnknownTarget -->
+    <link rel="icon" type="image/jpg" href="favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
+<body>
+<header>
+    {% block header %}
+        {% include 'includes/header.html.twig' %}
+    {% endblock %}
+</header>
+<main class="{% if mainCSSClass is defined %}{{ mainCSSClass }}{% endif %}">
+    {% block main %}
+
+    {% endblock %}
+</main>
+<footer>
+    {% block footer %}
+        {% include 'includes/footer.html.twig' %}
+    {% endblock %}
+</footer>
+</body>
+</html>

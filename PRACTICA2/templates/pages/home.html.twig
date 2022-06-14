@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% set mainCSSClass = 'page-home' %}
+
+{% block main %}
+    <aside class="menu-last-news">
+        <h2>Ultimas noticias</h2>
+        <ul>
+            <li>
+                <a href="https://www.elmundo.es/la-lectura/2022/04/05/624b098afc6c833d298b45c8.html" target="_blank">
+                    <article class="last-new">
+                        <h4>El paraíso de la arquitectura futura</h4>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.elmundo.es/cultura/2022/04/04/624ad4e1fdddff80558b45a4.html" target="_blank">
+                    <article class="last-new">
+                        <h4>
+                            La galería de los Uffizi se convirtió en
+                            2021 en el lugar cultural más visitado de Italia
+                        </h4>
+                    </article>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.elmundo.es/andalucia/2022/04/01/62474d48fc6c83c5758b457f.html" target="_blank">
+                    <article class="last-new">
+                        <h4>Bodegones: el 'carpe diem' de la pintura</h4>
+                    </article>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <section class="main-content">
+        {% include 'includes/flash_messages.html.twig' %}
+        <h2>
+            Exposiciones
+            {% if user is defined and user is not null and (
+                constant('App\\Entity\\User::ROLE_ADMIN') in user.roles
+                or constant('App\\Entity\\User::ROLE_COMISARIO') in user.roles
+                ) %}
+                <a class="action-button" href="/exhibition/create">
+                    <i class="fa-solid fa-circle-plus"></i>
+                </a>
+            {% endif %}
+        </h2>
+        <section class="container-expos">
+            {% if exhibitions is defined and exhibitions is not empty %}
+                {% for exhibition in exhibitions %}
+                    <article class="expo">
+                        <a href="/exhibition?id={{ exhibition.id }}">
+                            <!--suppress CheckImageSize -->
+                            <img src="build/images/{{ exhibition.imageFile.src }}"
+                                 width="{{ exhibition.imageFile.width/2 }}"
+                                 height="{{ exhibition.imageFile.height/2 }}"
+                                 alt="{{ exhibition.name }}">
+                        </a>
+                        <a href="/exhibition?id={{ exhibition.id }}">
+                            <h3>{{ exhibition.name }}</h3>
+                        </a>
+                        <p>{{ exhibition.author }}</p>
+                        <p>
+                            Fecha:
+                            {{ exhibition.startAt|format_datetime('short', 'none', locale='es', timezone=false) }}
+                        </p>
+                        <input id="expo-id" type="hidden" value="{{ exhibition.id }}">
+                    </article>
+                {% endfor %}
+            {% endif %}
+        </section>
+    </section>
+    {% if exhibitions is defined and exhibitions is not empty %}
+        {% for exhibition in exhibitions %}
+            <section class="expo-modal expo-modal-{{ exhibition.id }} d-none">
+                <article class="expo-modal-info">
+                    <i class="fa-regular fa-circle-xmark close-modal close-modal-{{ exhibition.id }}"></i>
+                    <a href="/exhibition?id={{ exhibition.id }}">
+                        <!--suppress CheckImageSize -->
+                        <img src="build/images/{{ exhibition.imageFile.src }}"
+                             width="{{ exhibition.imageFile.width/2 }}"
+                             height="{{ exhibition.imageFile.height/2 }}"
+                             alt="{{ exhibition.name }}">
+                    </a>
+                    <a href="/exhibition?id={{ exhibition.id }}">
+                        <h3>{{ exhibition.name }}</h3>
+                    </a>
+                    <p>{{ exhibition.author }}</p>
+                    <p>
+                        Fecha:
+                        {{ exhibition.startAt|format_datetime('short', 'none', locale='es', timezone=false) }}
+                    </p>
+                    <p>
+                        {{ exhibition.description }}
+                    </p>
+                    <p class="font-bold">
+                        Categoría: {{ exhibition.getCategoryString(exhibition.category) }}
+                    </p>
+                </article>
+            </section>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

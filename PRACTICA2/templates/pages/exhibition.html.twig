@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% set mainCSSClass = 'page-expo' %}
+
+{% block main %}
+    <section class="expo-img">
+        <img
+                class="img shadow"
+                src="build/images/{{ exhibition.imageFile.src }}"
+                width="{{ exhibition.imageFile.width }}"
+                height="{{ exhibition.imageFile.height }}"
+                alt="{{ exhibition.name }}"
+        >
+    </section>
+    <section class="expo-info">
+        <h1>
+            {{ exhibition.name }}
+            {% if user is defined and user is not null and (
+                constant('App\\Entity\\User::ROLE_ADMIN') in user.roles
+                or constant('App\\Entity\\User::ROLE_COMISARIO') in user.roles
+                ) %}
+                <a class="action-button" href="/exhibition/edit?id={{ exhibition.id }}">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+                <a class="action-button" href="/exhibition/delete?id={{ exhibition.id }}">
+                    <i class="fa-solid fa-trash-can"></i>
+                </a>
+            {% endif %}
+        </h1>
+        <h3>{{ exhibition.author }}</h3>
+        <p>
+            Disponible desde el {{ exhibition.startAt|format_datetime('short', 'none', locale='es', timezone=false) }}
+        </p>
+        <h4>Sala {{ exhibition.room }}</h4>
+        <p class="expo-info-description">{{ exhibition.description }}</p>
+    </section>
+    <section class="obras">
+        <fieldset>
+            <legend>
+                OBRAS
+                {% if user is defined and user is not null and (
+                    constant('App\\Entity\\User::ROLE_ADMIN') in user.roles
+                    or constant('App\\Entity\\User::ROLE_COMISARIO') in user.roles
+                    ) %}
+                    <a class="action-button" href="/piece/create?exhibition_id={{ exhibition.id }}">
+                        <i class="fa-solid fa-circle-plus"></i>
+                    </a>
+                {% endif %}
+            </legend>
+            {% if pieces is defined and pieces is not empty %}
+                {% for piece in pieces %}
+                    <article>
+                        <a href="/piece?id={{ piece.id }}">
+                            <!--suppress CheckImageSize -->
+                            <img
+                                    class="img shadow"
+                                    src="build/images/{{ piece.imageFile.src }}"
+                                    alt="{{ piece.name }}"
+                                    width="{{ piece.imageFile.width/2 }}"
+                                    height="{{ piece.imageFile.height/2 }}"
+                            >
+                            <h3>{{ piece.name }}</h3>
+                        </a>
+                    </article>
+                {% endfor %}
+            {% endif %}
+        </fieldset>
+    </section>
+    <section class="comments">
+        <h2>Comentarios</h2>
+        {% if comments is defined and comments is not empty %}
+            {% for comment in comments %}
+                <fieldset class="comment-container">
+                    <legend>{{ comment.user.name }}</legend>
+                    <p class="comment">
+                        {{ comment.text }}
+                    </p>
+                    <p class="comment-date">
+                        {{ comment.stringifyStartAt }}
+                    </p>
+                </fieldset>
+            {% endfor %}
+        {% else %}
+            <p>No se ha encontrado ningún comentario...</p>
+        {% endif %}
+        {% if user is not defined or user is not null %}
+            <form class="commentsForm" action="/exhibition/comment">
+                <textarea id="box-comment" name="message" rows="4" placeholder="Deja aquí tu comentario..."></textarea>
+                <input type="hidden" name="exhibition_id" value="{{ exhibition.id }}"/>
+                <input type="hidden" id="max_chars" value="200"/>
+                <p id="comment-characters" class="help-text font-bold">
+                    <span class="comment-characters-count">200</span> caracteres
+                </p>
+                <button id="submit-comment" type="submit">Comentar</button>
+            </form>
+        {% else %}
+            <p class="text-center">Inicie sesión para dejar un comentario.</p>
+        {% endif %}
+    </section>
+{% endblock %}

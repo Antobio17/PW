@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% set mainCSSClass = 'page-form' %}
+
+{% block main %}
+    {% include 'includes/flash_messages.html.twig' %}
+
+    <h1>{% block title %}{% endblock %}</h1>
+
+    <section class="form-container">
+        {% block form %}
+            {{ form_start(form) }}
+            {{ form_end(form) }}
+        {% endblock %}
+    </section>
+{% endblock %}

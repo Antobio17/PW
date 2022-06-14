@@ -1,0 +1,10 @@
+{% if flashMessages is defined %}
+    {% for flashMessage in flashMessages %}
+        {% if flashMessage is not empty %}
+            <section
+                    class="{% if flashMessage.success %}flash-message-success{% else %}flash-message-failed{% endif %}">
+                <h4 class="text-center">{{ flashMessage.message }}</h4>
+            </section>
+        {% endif %}
+    {% endfor %}
+{% endif %}

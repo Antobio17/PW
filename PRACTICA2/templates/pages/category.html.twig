@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% set mainCSSClass = 'page-category-expo' %}
+
+{% block main %}
+    {% if category == constant('App\\Entity\\Exhibition::CATEGORY_PHOTOGRAPHY') %}
+        <h1>Exposiciones de Fotografía</h1>
+    {% elseif category == constant('App\\Entity\\Exhibition::CATEGORY_PAINTING') %}
+        <h1>Exposiciones de Pintura</h1>
+    {% elseif category == constant('App\\Entity\\Exhibition::CATEGORY_SCULPTURE') %}
+        <h1>Exposiciones de Escultura</h1>
+    {% endif %}
+    <section class="container-expos">
+        {% for exhibition in exhibitions %}
+            <article class="expo">
+                <a href="/exhibition?id={{ exhibition.id }}">
+                    <!--suppress CheckImageSize -->
+                    <img src="/build/images/{{ exhibition.imageFile.src }}"
+                         width="{{ exhibition.imageFile.width/2 }}"
+                         height="{{ exhibition.imageFile.height/2 }}"
+                         alt="{{ exhibition.name }}">
+                </a>
+                <a href="/exhibition?id={{ exhibition.id }}">
+                    <h3>{{ exhibition.name }}</h3>
+                </a>
+                <p>{{ exhibition.author }}</p>
+                <p>
+                    Fecha:
+                    {{ exhibition.startAt|format_datetime('short', 'none', locale='es', timezone=false) }}
+                </p>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}

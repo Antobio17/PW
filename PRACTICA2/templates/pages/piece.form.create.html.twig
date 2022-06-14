@@ -1,0 +1,43 @@
+{% extends 'pages/piece.form.html.twig' %}
+
+{% block title %}
+    {% if exhibition is defined and exhibition is not null %}
+        Formulario de nueva pieza para {{ exhibition.name }}
+    {% else %}
+        Formulario de nueva pieza
+    {% endif %}
+{% endblock %}
+
+{% block form %}
+    {{ form_start(form, {'attr': {'id': 'piece-form'}}) }}
+    <section class="form-section form-section-info">
+        <h4><i class="fas fa-solid fa-circle-info"></i> Información general</h4>
+        {{ form_row(form.name, {
+            required: false
+        }) }}
+    </section>
+    <section class="form-section form-section-detail">
+        <h4><i class="fas fa-solid fa-asterisk"></i> Detalles</h4>
+        {{ form_row(form.author, {
+            required: false
+        }) }}
+        {{ form_row(form.description, {
+            required: false
+        }) }}
+    </section>
+    <section class="form-section form-section-image">
+        <h4><i class="fas fa-solid fa-image"></i> Imagen</h4>
+        {{ form_row(form.imageSrc, {
+            required: false
+        }) }}
+        <p id="validate-image-file" class="help-text font-bold"></p>
+        {{ form_row(form.width) }}
+        {{ form_row(form.height) }}
+    </section>
+    <section class="form-section form-section-submit">
+        {{ form_row(form.submit, {
+            label: 'Crear'
+        }) }}
+    </section>
+    {{ form_end(form) }}
+{% endblock %}

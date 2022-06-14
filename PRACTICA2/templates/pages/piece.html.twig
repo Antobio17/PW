@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% set mainCSSClass = 'page-obra' %}
+
+{% block main %}
+    <section class="section-info-obra">
+        <img
+                class="img shadow"
+                src="build/images/{{ piece.imageFile.src }}"
+                width="{{ piece.imageFile.width }}" height="{{ piece.imageFile.height }}"
+                alt="{{ piece.name }}"
+        >
+        <h1>
+            {{ piece.name }}
+            {% if user is defined and user is not null and (
+                constant('App\\Entity\\User::ROLE_ADMIN') in user.roles
+                or constant('App\\Entity\\User::ROLE_COMISARIO') in user.roles
+                ) %}
+                <a class="action-button" href="/piece/edit?id={{ piece.id }}">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+                <a class="action-button" href="/piece/delete?id={{ piece.id }}">
+                    <i class="fa-solid fa-trash-can"></i>
+                </a>
+            {% endif %}
+        </h1>
+        <h3>Por {{ piece.author }}</h3>
+        <p class="obra-description">
+            {{ piece.description }}
+        </p>
+    </section>
+{% endblock %}
