@@ -1,0 +1,28 @@
+@import "includes/style-header.scss";
+@import "includes/style-main.scss";
+@import "includes/style-footer.scss";
+@import "includes/style-form.scss";
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.color-success {
+  color: #155724;
+}
+
+.color-danger {
+  color: #721c24;
+}
+
+.text-center {
+  text-align: center;
+}

@@ -1,0 +1,159 @@
+header {
+    color: white;
+    background-color: #222222;
+    display: grid;
+    justify-content: space-between;
+}
+
+header .header-brand {
+    text-transform: uppercase;
+    grid-column: 1/3;
+}
+
+header .header-users {
+    grid-column: 3/3;
+}
+
+header .nav-bar {
+    grid-column: span 3;
+    background-color: #323232;
+    padding: 1.0rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+header .nav-bar a {
+    margin: 0 2.0rem;
+}
+
+header .header-brand {
+    align-items: center;
+    display: flex;
+}
+
+header .header-users {
+    margin: auto 1.0rem;
+    text-align: right;
+}
+
+header .header-users .login-form {
+    margin-bottom: 5px;
+}
+
+header .header-users .login-form input {
+    font-family: 'Muli', sans-serif;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 0.5rem;
+    background-color: #222222;
+}
+
+header .header-users .login-form button {
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 0.5rem;
+    background-color: #424242;
+    transition: 0.5s;
+}
+
+header .header-users .login-form button:hover {
+    color: #222222;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 0.5rem;
+    background-color: white;
+    transition: 0.5s;
+}
+
+header .header-users .register {
+    margin: 0 0.8rem;
+}
+
+header .nav-bar .section-navigation {
+    border-left: 1px solid white;
+}
+
+header .header-profile {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 0 0.8rem 8px;
+}
+
+header .header-profile .fa-user {
+    margin-right: 10px;
+}
+
+@media (max-width: 745px) {
+    header {
+        display: block;
+        padding: 1rem 0 0;
+    }
+
+    header .header-brand {
+        justify-content: center;
+    }
+
+    header .header-users {
+        margin: 1rem auto;
+        text-align: center;
+    }
+
+    header .header-users .login-form input,
+    header .header-users .login-form button {
+        margin: 5px 0;
+    }
+
+    header .nav-bar {
+        display: grid;
+    }
+
+    header .header-profile {
+        justify-content: center;
+    }
+
+    header .nav-bar .section-navigation {
+        border-top: 1px solid white;
+        border-left: none;
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 460px) {
+    header .header-users .login-form {
+        display: grid;
+    }
+
+    header .header-users .login-form input,
+    header .header-users .login-form button {
+        margin: 5px 4rem;
+    }
+
+    header .nav-bar a {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 365px) {
+    header .nav-bar .section-navigation,
+    header .nav-bar .section-expo-types {
+        display: grid;
+    }
+
+    header .nav-bar a {
+        margin: 5px 0;
+    }
+
+    header .header-users .login-form,
+    header .header-users .login-form input,
+    header .header-users .login-form button {
+        margin: 0.2rem auto;
+        width: 80%;
+    }
+}

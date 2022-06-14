@@ -1,0 +1,15 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/build/runtime.js",
+        "/build/vendors-node_modules_fortawesome_fontawesome-free_js_all_js-node_modules_bootstrap_dist_js_bo-b6590b.js",
+        "/build/app.js"
+      ],
+      "css": [
+        "/build/vendors-node_modules_fortawesome_fontawesome-free_js_all_js-node_modules_bootstrap_dist_js_bo-b6590b.css",
+        "/build/app.css"
+      ]
+    }
+  }
+}

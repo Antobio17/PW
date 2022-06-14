@@ -1,0 +1,138 @@
+.page-form {
+  width: 70%;
+  margin: 4rem auto;
+}
+
+.page-form .form-container form {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 33% 33% 33%;
+  justify-items: center;
+  border: 2px solid #222222;
+  border-radius: 20px;
+  padding: 2rem;
+  background-color: #cbcbcb;
+}
+
+.page-form .form-container-2 form {
+  grid-template-columns: 50% 50% !important;
+}
+
+.page-form .form-container form label {
+  margin: 1rem 0 0;
+}
+
+.page-form .form-container form textarea,
+.page-form .form-container form select,
+.page-form .form-container form input {
+  width: 90%;
+  font-family: 'Muli', sans-serif;
+  color: #222222;
+  border-radius: 20px;
+  border: 2px solid #222222;
+  padding: 0.6rem;
+  background-color: white;
+  margin: 1rem 0;
+}
+
+.page-form .form-container form textarea {
+  height: 75px;
+}
+
+.page-form .form-container form button {
+  width: 300px;
+  grid-row: 6;
+  grid-column: span 2;
+  font-family: 'Muli', sans-serif;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 2px solid #222222;
+  padding: 0.6rem;
+  transition: 0.5s;
+  margin: 1rem 0;
+  color: #222222;
+}
+
+.page-form .form-container form button:hover {
+  background-color: #222222;
+  color: white;
+  border-radius: 20px;
+  border: 2px solid #222222;
+  padding: 0.6rem;
+  transition: 0.5s;
+}
+
+.page-form .form-container form .form-section-submit {
+  grid-row: 2;
+  grid-column: span 3;
+}
+
+.help-text {
+  color: #3e3e3e;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1500px) {
+  .page-form .form-container form {
+    grid-template-columns: 50% 50%;
+  }
+
+  .page-form .form-container form .form-section-image {
+    grid-row: 2;
+    grid-column: span 2;
+  }
+
+  .page-form .form-container form .form-section-submit {
+    grid-row: 3;
+    grid-column: span 2;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .page-form .form-container-2 form {
+    grid-template-columns: 90% !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .page-form .form-container .form-section {
+    width: 90%;
+  }
+
+  .page-form .form-container form {
+    grid-template-columns: 90%;
+  }
+
+  .page-form .form-container form .form-section-detail {
+    grid-row: 2;
+  }
+
+  .page-form .form-container form .form-section-image {
+    grid-column: span 1;
+    grid-row: 3;
+  }
+
+  .page-form .form-container form .form-section-submit {
+    grid-column: span 1;
+    grid-row: 4;
+    margin-top: 50px;
+  }
+
+  .page-form .form-container form .form-section-submit div {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-form {
+    width: 90%;
+    margin: 4rem auto;
+  }
+
+  .page-form .form-container form button {
+    width: 90%;
+  }
+}

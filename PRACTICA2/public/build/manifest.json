@@ -1,0 +1,21 @@
+{
+  "build/app.css": "/build/app.css",
+  "build/app.js": "/build/app.js",
+  "build/runtime.js": "/build/runtime.js",
+  "build/vendors-node_modules_fortawesome_fontawesome-free_js_all_js-node_modules_bootstrap_dist_js_bo-b6590b.css": "/build/vendors-node_modules_fortawesome_fontawesome-free_js_all_js-node_modules_bootstrap_dist_js_bo-b6590b.css",
+  "build/vendors-node_modules_fortawesome_fontawesome-free_js_all_js-node_modules_bootstrap_dist_js_bo-b6590b.js": "/build/vendors-node_modules_fortawesome_fontawesome-free_js_all_js-node_modules_bootstrap_dist_js_bo-b6590b.js",
+  "build/fonts/fa-solid-900.ttf": "/build/fonts/fa-solid-900.e615bbcb.ttf",
+  "build/images/profile.png": "/build/images/profile.png",
+  "build/images/acuarela.jpg": "/build/images/acuarela.jpg",
+  "build/fonts/fa-brands-400.ttf": "/build/fonts/fa-brands-400.b823fc0d.ttf",
+  "build/fonts/fa-solid-900.woff2": "/build/fonts/fa-solid-900.59edf72a.woff2",
+  "build/fonts/fa-brands-400.woff2": "/build/fonts/fa-brands-400.ebb7a127.woff2",
+  "build/images/john-blockley-granja.jpg": "/build/images/john-blockley-granja.jpg",
+  "build/fonts/fa-regular-400.ttf": "/build/fonts/fa-regular-400.0d03b1bb.ttf",
+  "build/images/el_posito_logo.png": "/build/images/el_posito_logo.png",
+  "build/fonts/fa-regular-400.woff2": "/build/fonts/fa-regular-400.0caf4c6c.woff2",
+  "build/fonts/fa-v4compatibility.ttf": "/build/fonts/fa-v4compatibility.4baccb54.ttf",
+  "build/fonts/fa-v4compatibility.woff2": "/build/fonts/fa-v4compatibility.afac8956.woff2",
+  "build/images/github.svg": "/build/images/github.svg",
+  "build/images/linkedin.svg": "/build/images/linkedin.svg"
+}
